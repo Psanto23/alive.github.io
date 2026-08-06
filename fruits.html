@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Alive Internet Theory</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  
+
   <link rel="stylesheet" href="css/fruit.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
     <nav class="navbar">
   <a href="index.html" class="nav-button">Home</a>
   <a href="poems.html" class="nav-button">Poems</a>
-  <a href="stories.html" class="nav-button">Fruits</a>
+  <a href="fruits.html" class="nav-button">Fruits</a>
   <a href="music.html" class="nav-button">Music</a>
   <a href="photos.html" class="nav-button">Photos</a>
   <a href="thoughts.html" class="nav-button">Thoughts</a>
@@ -22,26 +22,20 @@
 </nav>
 
 
-  </head>
-<body>
 
- 
-    
     <div class="content">
       <div class="question">What's your favorite fruit?</div>
-      
-      <div class="voted-message" id="votedMsg">You have already submitted your vote.</div>
-      
-      <div class="options" id="options">
-        <div class="option">Orange</div>
-        <div class="option">Apple</div>
-        <div class="option">Banana</div>
-        <div class="option">Grape</div>
+
+      <div class="voted-message" id="votedMsg">Your vote: <span id="votedFruit"></span> — pick a different fruit anytime to change it.</div>
+
+      <div class="search-wrapper">
+        <input type="text" id="fruitSearch" class="fruit-search" placeholder="Type a fruit name..." autocomplete="off">
+        <ul class="suggestions" id="suggestions"></ul>
       </div>
 
       <div class="results" id="results">
         <div class="chart-area">
-          <div class="y-axis" id="yAxis"></div>
+          <div class="y-axis" id="yAxis">1</div>
           <div class="chart-bars" id="chartBars"></div>
         </div>
 
@@ -60,10 +54,10 @@
       </div>
     </div>
   </div>
-  <script src="fruit.js"></script>
-  
 
-  </div>
+  <!-- Firebase (order matters: app, then database, then your script) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+  <script src="fruit.js"></script>
 </body>
 </html>
-

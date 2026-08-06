@@ -1,5 +1,5 @@
 body {
-    background-image: url('snowflake.png');
+    background-image: url('sun.png');
     background-repeat: repeat;   /* repeats in all directions */
     color: #ff00ff;
     background-color: white;
@@ -27,12 +27,24 @@ a:hover {
     text-decoration: underline;
 }
 
-marquee {
+.marquee-container {
     background-color: #00ffff;
     color: #ff00ff;
     font-weight: bold;
     margin: 10px 0;
     padding: 5px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.marquee-text {
+  display: inline-block;
+  animation: marquee-alternate 5s linear infinite alternate;
+}
+
+@keyframes marquee-alternate {
+  from { transform: translateX(px); }
+  to   { transform: translateX(490px); }
 }
 
 
