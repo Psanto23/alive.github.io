@@ -22,7 +22,7 @@ const votesRef = db.ref('fruitVotes');
 // Add/remove fruits here as you like.
 // ============================================================
 const FRUIT_LIST = [
-  "Apple", "Apricot", "Banana", "Blackberry", "Blueberry",
+  "Apple", "Apricot", "Avocado", "Banana", "Blackberry", "Blueberry",
   "Boysenberry", "Breadfruit", "Cantaloupe", "Cherry", "Clementine",
   "Coconut", "Cranberry", "Currant", "Date", "Dragon fruit", "Durian",
   "Elderberry", "Fig", "Gooseberry", "Grape", "Grapefruit", "Guava",
@@ -125,6 +125,7 @@ function renderResults(counts) {
   const chartBars = document.getElementById('chartBars');
   const statsBody = document.getElementById('statsBody');
   const totalVotesDiv = document.getElementById('totalVotes');
+  const fruitCountDiv = document.getElementById('fruitCount');
   const yAxis = document.getElementById('yAxis');
 
   const entries = Object.entries(counts).sort((a, b) => b[1] - a[1]);
@@ -139,8 +140,9 @@ function renderResults(counts) {
   const maxVotes = Math.max(...top.map(([, v]) => v), 1);
 
   yAxis.innerHTML = '';
-  const step = Math.max(1, Math.ceil(maxVotes / 5));
-  for (let i = maxVotes; i >= 0; i -= step) {
+  const axisMax = Math.max(maxVotes, 4); // always show a real spread of ticks, even early on
+  const step = Math.max(1, Math.ceil(axisMax / 5));
+  for (let i = axisMax; i >= 0; i -= step) {
     const label = document.createElement('div');
     label.className = 'y-label';
     label.textContent = i;
@@ -149,7 +151,7 @@ function renderResults(counts) {
 
   chartBars.innerHTML = '';
   top.forEach(([name, votes]) => {
-    const height = (votes / maxVotes) * 100;
+    const height = (votes / axisMax) * 100;
 
     const barWrapper = document.createElement('div');
     barWrapper.className = 'bar-wrapper';
@@ -191,6 +193,7 @@ function renderResults(counts) {
   });
 
   totalVotesDiv.textContent = `Total Votes: ${total}`;
+  fruitCountDiv.textContent = `${entries.length} of ${FRUIT_LIST.length} fruits have at least one vote`;
   document.getElementById('results').classList.add('show');
 }
 
