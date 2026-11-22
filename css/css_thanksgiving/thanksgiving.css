@@ -1,0 +1,232 @@
+body {
+    /*background-image: url('backgrounds/football.png');
+    background-repeat: repeat;   /* repeats in all directions */
+    color: #7c3a00bd;
+    background-color: #8c1c00a9;
+    font-family: "Comic Sans MS", "Courier New", cursive;
+    text-align: center;
+
+ 
+}
+
+.container {
+    width: 1200px;
+    margin: 30px auto;
+    border: 4px double #ff00ff;
+    box-shadow: 5px 5px #00ffff;
+    background-color: white;
+    padding: 20px;
+}
+
+a {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.marquee-container {
+    background-color: #00ffff;
+    color: #ff00ff;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 5px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.marquee-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee-alternate 8s linear infinite alternate;
+}
+
+@keyframes marquee-alternate {
+  from {
+    margin-left: 0;
+    transform: translateX(0);
+  }
+  to {
+    margin-left: 99%;
+    transform: translateX(-100%);
+  }
+}
+
+
+
+.blog-dates
+{
+    margin-top: 20px;
+}
+
+/* === NAVBAR === */
+.navbar {
+    background-color: #0000ff;
+    border: 3px outset #ff00ff;
+    padding: 12px;
+    height: 25px;
+
+    
+}
+
+.nav-button {
+    background-color: #ffff00;
+    color: #000;
+    border: 2px inset #000;
+    padding: 5px 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Comic Sans MS", sans-serif;
+    box-shadow: 2px 2px #00ffff;
+}
+
+.nav-button:hover {
+    background-color: #ff00ff;
+    color: #fff;
+    border: 2px outset #000;
+    cursor: grab;
+}
+.nav-button:active
+{
+    background-color: #ff00ff;
+    color: #fff;
+    border: 2px outset #000;
+    cursor: grabbing;
+}
+
+
+/* POEMS */
+
+.poem-list a
+{
+    font-family: 'Times New Roman', Times, serif;   
+    color: #ff00ff;
+    padding: 10px;
+    line-height: 40px;
+    white-space: nowrap;
+    display:  inline-block;
+
+    
+
+}
+.poem
+{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    width: fit-content;
+    border: 3px solid black;
+    padding: 20px 30px;
+    white-space: pre-wrap; 
+
+}
+
+b{
+    font-size: large;
+}
+.poem-title
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight:bolder;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 40px;
+    width: 450px;
+    
+
+    
+    
+}
+
+/* INDEX.HTML */
+.song-title
+{
+    color: black;
+    font-family: 'Foremost', sans-serif;
+    font-size: 40px;
+    background-color: white;
+    width: 594px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid black;
+    line-height: 70px;
+    margin-bottom: 10px;
+
+}
+
+
+
+.SOTD
+{
+    font-family: 'Brush Script MT';
+    font-size: 50px;
+    color: black;
+    background-color: white;
+    width: 594px;
+    line-height: 100px;
+    margin: -15px auto 0 auto;  /* top | left/right | bottom */
+    border: 3px solid black;
+
+
+
+}
+
+.songwriter
+{
+    font-family: 'Foremost', sans-serif;
+    background-color: white;
+    width: 596px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+    color: black;
+    
+}
+
+@font-face
+{
+    font-family: 'Foremost';
+    src:  url('/Users/paulsanto/Alive-Internet-Theory/ForemostRegular.ttf');
+}
+
+/* PHOTOS */
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Each item */
+.photos figure {
+  margin: 0;
+  background: #f7f7f7;
+  
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 10px;
+  
+}
+
+/* Make all images the same height and crop nicely */
+.photos img {
+  width: 100%;
+  height: 200px;     /* you can adjust this */
+  object-fit: cover; /* key line: keeps things neat */
+  display: block;
+}
+
+/* Captions */
+.photos figcaption {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.9rem;
+  padding: 8px 10px;
+  color: #333;
+}
