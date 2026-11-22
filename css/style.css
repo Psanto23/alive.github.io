@@ -1,5 +1,5 @@
 body {
-    background-image: url('sun.png');
+    background-image: url('backgrounds/snowflake.png');
     background-repeat: repeat;   /* repeats in all directions */
     color: #ff00ff;
     background-color: white;
@@ -34,17 +34,24 @@ a:hover {
     margin: 10px 0;
     padding: 5px;
     overflow: hidden;
-    width: 100%;
+    text-align: left;
 }
 
 .marquee-text {
   display: inline-block;
-  animation: marquee-alternate 5s linear infinite alternate;
+  white-space: nowrap;
+  animation: marquee-alternate 8s linear infinite alternate;
 }
 
 @keyframes marquee-alternate {
-  from { transform: translateX(px); }
-  to   { transform: translateX(490px); }
+  from {
+    margin-left: 0;
+    transform: translateX(0);
+  }
+  to {
+    margin-left: 99%;
+    transform: translateX(-100%);
+  }
 }
 
 
@@ -92,31 +99,31 @@ a:hover {
 
 
 /* POEMS */
-.poem-list
-{   
-    font-family: 'Times New Roman', Times, serif;
-    letter-spacing: 1px;
-
-
-}
 
 .poem-list a
 {
-    
+    font-family: 'Times New Roman', Times, serif;   
     color: #ff00ff;
     padding: 10px;
+    line-height: 40px;
+    white-space: nowrap;
+    display:  inline-block;
+
+    
 
 }
 .poem
 {
     font-family: 'Times New Roman', Times, serif;
-    text-align: center;
+    text-align: left;
     background-color: white;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
-    width: 400px;
+    width: fit-content;
     border: 3px solid black;
+    padding: 20px 30px;
+    white-space: pre-wrap; 
 
 }
 

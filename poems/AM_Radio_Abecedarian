@@ -8,7 +8,7 @@
     <nav class="navbar">
   <a href="../index.html" class="nav-button">Home</a>
   <a href="../poems.html" class="nav-button">Poems</a>
-  <a href="../stories.html" class="nav-button">Stories</a>
+  <a href="../fruits.html" class="nav-button">Fruits</a>
   <a href="../music.html" class="nav-button">Music</a>
   <a href="../photos.html" class="nav-button">Photos</a>
   <a href="../thoughts.html" class="nav-button">Thoughts</a>
@@ -20,6 +20,7 @@
 <pre class="poem">
 
 <b>AM Radio Abecedarian</b>
+
 At the early hours of the morning
 Barely awake my ears are greeted to the sound of static that
 Cracks through the old speakers of the Buick Lesabre
@@ -52,6 +53,7 @@ WFAN New York, to most the
 Xeric of the broadcasting world.
 Yet for me, on hot and humid May mornings, it is the
 Zenith of talk radio.
+
 </pre>
 </body>
 </html>
